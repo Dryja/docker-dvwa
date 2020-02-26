@@ -11,7 +11,7 @@ while [[ RET -ne 0 ]]; do
 done
 
 
-mysql -uroot -e "CREATE USER 'admin'@'%' IDENTIFIED BY 'p@ssw0rd'"
+mysql -uroot -e "CREATE USER 'admin'@'127.0.0.1' IDENTIFIED BY 'p@ssw0rd'"
 mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'127.0.0.1' WITH GRANT OPTION"
 
 # You can create a /mysql-setup.sh file to intialized the DB
