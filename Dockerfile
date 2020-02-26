@@ -25,7 +25,9 @@ RUN wget https://github.com/ethicalhack3r/DVWA/archive/v${VERSION}.tar.gz && \
     chmod +x /tmp/myStartupScript.sh && \
     mv /tmp/myStartupScript.sh /mysql-setup.sh && \
     chmod +x /tmp/setup_dvwa.sh && \
-    /tmp/setup_dvwa.sh
+    /tmp/setup_dvwa.sh && \
+    mv /tmp/create_mysql_admin_user.sh / && \
+    chmod +x create_mysql_admin_user.sh
 
 CMD ["/run.sh"]
 
